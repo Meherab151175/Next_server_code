@@ -144,7 +144,7 @@ async function run() {
 
 
           
-        // ! CLASSES ROUTES
+        //  CLASSES ROUTES
 
 
         app.post('/new-class', verifyJWT, verifyInstructor, async (req, res) => {
@@ -154,7 +154,7 @@ async function run() {
           res.send(result);
       });
 
-      // GET ALL CLASSES ADDED BY INSTRUCTOR
+      // get all classes added by the instructor
       app.get('/classes/:email', verifyJWT, verifyInstructor, async (req, res) => {
           const email = req.params.email;
           const query = { instructorEmail: email };
