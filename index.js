@@ -198,7 +198,7 @@ async function run() {
           res.send(result);
       })
 
-      // GET ALL INSTRUCTORS
+      // get all instructor
       app.get('/instructors', async (req, res) => {
           const query = { role: 'instructor' };
           const result = await userCollection.find(query).toArray();
