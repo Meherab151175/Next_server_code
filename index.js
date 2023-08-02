@@ -446,7 +446,6 @@ async function run() {
 
           ]
           const result = await enrolledCollection.aggregate(pipeline).toArray();
-          // const result = await enrolledCollection.find(query).toArray();
           res.send(result);
       })
 
