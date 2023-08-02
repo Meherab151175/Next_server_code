@@ -284,7 +284,7 @@ async function run() {
               clientSecret: paymentIntent.client_secret
           });
       })
-      // POST PAYMENT INFO 
+      // post payment info
       app.post('/payment-info', verifyJWT, async (req, res) => {
           const paymentInfo = req.body;
           const classesId = paymentInfo.classesId;
