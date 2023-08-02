@@ -333,7 +333,7 @@ async function run() {
       })
 
 
-      // ! ENROLLED ROUTES
+      //  ENROLLED ROUTES
 
       app.get('/popular_classes', async (req, res) => {
           const result = await classesCollection.find().sort({ totalEnrolled: -1 }).limit(6).toArray();
