@@ -41,7 +41,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
     const userCollection = client.db("nextDB").collection("users");
     const classesCollection = client.db("nextDB").collection("classes");
@@ -402,7 +402,7 @@ async function run() {
 
       })
 
-      // !GET ALL INSTrUCTOR  
+      // get all instructor 
 
       app.get('/instructors', async (req, res) => {
           const result = await userCollection.find({ role: 'instructor' }).toArray();
