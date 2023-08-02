@@ -393,7 +393,6 @@ async function run() {
               instructors,
               totalClasses,
               totalEnrolled,
-              // totalRevenueAmount
           }
           res.send(result);
 
